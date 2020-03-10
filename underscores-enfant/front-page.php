@@ -58,26 +58,22 @@ echo '<h4>' . get_the_title() . '</h4>';
 // Restore original Post Data
 wp_reset_postdata();
  
+echo '<h1>Question 2</h1>';
 /* The 2nd Query (without global var) */
 $args2 = array(
 
-    "category_name" => "",
-
-    
-
+    "category_name" => "cours",
+    'posts_per_page' => 29,
+    'orderby' => "title",
+    'order' => "ASC",
 
 );
 $query2 = new WP_Query( $args2 );
-$catID = get_the_category($query2->post->ID);
-
-echo "<h1>" .category_description($catID[0]). "</h1>";
 // The 2nd Loop
 while ( $query2->have_posts() ) {
     $query2->the_post();
-
-         echo '<li>' . get_the_title( $query2->post->ID ) . " - " .get_the_date().'</li>';
-       
-}
+    echo '<h4>' . get_the_title() . '</h4>';
+    }
 ?>
 
 		</main><!-- #main -->
