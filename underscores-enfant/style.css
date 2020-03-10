@@ -82,11 +82,9 @@ body {
           justify-content: center;
 }
 
-.site-main {
-  background: repeating-linear-gradient(-45deg, #609de2, #4b9bc0 20px, #136392 20px, #1a4aa5 40px);
-  color: white;
-}
-
+/*.site-main{
+	@include rayure-bleu;
+}*/
 /*.grid {
 	background-color: darken($couleur_turquoise,5%);
 }*/
