@@ -19,7 +19,8 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
+        <?php
+        
 		/*while ( have_posts() ) :
 			the_post();
 
@@ -29,8 +30,10 @@ get_header();
 		
 
 		endwhile; // End of the loop.
-	
-        */echo '<h1>Question 1</h1>';
+	      
+        */
+        echo '<h4 class = "Menu">' . '<a href =http://localhost/Examen/category/cours/>' . "Cours" . " ". '</a>' .'<a href ="#">' . "Atelier" . '</a>'." ". '</a>' .'<a href ="#">' . "Nouvelles" . " ". '</a>' .'<a href ="#">' . "Événement" . '</a>'.'</a>'. '</h2>';
+        echo '<h1>Question 3 - Les cours du programme de Techniques d intégration multimédia du collège de Maisonneuve</h1>';
  
 
 /* Restore original Post Data 
@@ -45,35 +48,23 @@ wp_reset_postdata();
  // The Query
 $args = array(
     "category_name" => "cours",
-    'posts_per_page' => 10,
+    'posts_per_page' => 29,
+    'orderby' => "title",
+    'order' => "ASC",
 );
-$query1 = new WP_Query( $args );
 
+$query1 = new WP_Query( $args );
+$i = 1;
 // The Loop
 while ( $query1->have_posts() ) {
 $query1->the_post();
-echo '<h4>' . get_the_title() . '</h4>';
+
+echo '<h4>' . $i++ . " " .'<a href= get_post_permalink()>'. get_the_title() . '</a>' . " " . "-" .'<span class ="session">'. " session: " . substr(get_the_title(),4,1) .'</span>' ." " . "-" .'<span class ="domaine">'. " domaine: " . substr(get_the_title(),5,1) . '</span>' .'</h4>'; 
 }
 
 // Restore original Post Data
 wp_reset_postdata();
  
-echo '<h1>Question 2</h1>';
-/* The 2nd Query (without global var) */
-$args2 = array(
-
-    "category_name" => "cours",
-    'posts_per_page' => 29,
-    'orderby' => "title",
-    'order' => "ASC",
-
-);
-$query2 = new WP_Query( $args2 );
-// The 2nd Loop
-while ( $query2->have_posts() ) {
-    $query2->the_post();
-    echo '<h4>' . get_the_title() . '</h4>';
-    }
 ?>
 
 		</main><!-- #main -->

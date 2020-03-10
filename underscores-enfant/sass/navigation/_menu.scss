@@ -1,0 +1,21 @@
+.Menu{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+
+    a{
+        color: $couleur_jaune;
+
+        &:focus{
+            color: $couleur_rouge;
+        }
+        &:hover{
+            color: $couleur_bleu;
+        }
+
+        &:active{
+            color:$couleur_vert;
+        }
+    }
+}
+

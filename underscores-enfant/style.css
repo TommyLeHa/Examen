@@ -16,7 +16,7 @@
 */
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #8bafce;
+  background-color: #d7e2eb;
 }
 
 /*--------------------------------------------------------------
@@ -53,11 +53,6 @@ body {
   text-align: center;
 }
 
-.wp-block-cgb-block-my-block {
-  background-color: #2869a1;
-  color: white;
-}
-
 .site-header {
   display: none;
 }
@@ -70,45 +65,41 @@ body {
   text-align: center;
 }
 
-.conteneurGlobal {
+.session {
+  color: red;
+}
+
+.domaine {
+  color: blue;
+}
+
+/*--------------------------------------------------------------
+# Menu
+--------------------------------------------------------------*/
+.Menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-left: 1%;
-}
-
-.conteneurGlobal div {
-  margin-left: 1%;
-}
-
-.conteneurGlobal img {
-  width: 150px;
-  height: 150px;
-  min-width: 150px;
-  min-height: 150px;
-}
-
-.conteneurGlobalImage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-left: 1%;
 }
 
-.conteneurGlobalImage h4 {
-  margin-left: 1%;
+.Menu a {
+  color: #ffff33;
 }
 
-.conteneurGlobalImage img {
-  width: 150px;
-  height: 150px;
-  min-width: 150px;
-  min-height: 150px;
+.Menu a:focus {
+  color: #c51a1a;
+}
+
+.Menu a:hover {
+  color: #154e7e;
+}
+
+.Menu a:active {
+  color: #3cad20;
 }
 /*# sourceMappingURL=style.css.map */
