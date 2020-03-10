@@ -41,3 +41,13 @@
 .domaine{
 	color:blue;
 }
+.footer{
+	display: flex;
+	justify-content: center;
+}
+.site-main{
+	@include rayure-bleu;
+}
+/*.grid {
+	background-color: darken($couleur_turquoise,5%);
+}*/
